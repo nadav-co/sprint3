@@ -1,0 +1,43 @@
+body {
+    background-color: lightblue;
+}
+
+.user-preview {
+    background-color: darkcyan;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.user-preview button {
+    margin: 5px;
+}
+
+.dark {
+    background-color: rgb(66, 64, 64);
+    color: rgb(216, 217, 218);
+}
+
+.light {
+    background-color: rgb(209, 208, 208);
+    color: rgb(80, 81, 82);
+}
+
+.red {
+    color: red;
+}
+
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.center {
+    align-items: center;
+}

@@ -1,7 +1,4 @@
-body {
-    background-color: lightblue;
-}
-
+@import '../../apps/Keep/assets/css/note-style.css';
 .user-preview {
     background-color: darkcyan;
     padding: 5px;

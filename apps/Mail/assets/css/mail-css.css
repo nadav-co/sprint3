@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 .mail-details {
     font-size: 1.5em;
     line-height: 30px;
     width: 60%;
     margin-left: 10%;
     margin-top: 15px;
+    
 }
 
 .mail-details button {
@@ -15,9 +20,8 @@
 }
 
 .mail-preview {
-    font-size: 1.3em;
-    padding: 15px;
-    margin: 2px;
+    font-size: 1.1em;
+    margin: 5px;
     overflow: hidden;
     height: 10vh;
     line-height: 10vh;
@@ -31,6 +35,22 @@ aside {
     border: 1px solid #ece9e9;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    width: 10vw;
+    height: 50vh;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mails-container {
+    margin-left: 10vw;
+}
+
+.mail-subject {
+    display: inline;
+    width: 100px;
+    margin-right: 50px;
 }
 
 .unread {
@@ -63,12 +83,107 @@ aside {
 }
 
 .btn {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 50px;
+    width: 3vw;
+    cursor: pointer;
+}
+
+.add-link:hover {
+    width: 2vw;
+}
+
+.add-link {
+    transition: all 0.3s;
+}
+
+.add-btn.btn:hover {
+    width: 5vw;
+}
+
+.add-btn.btn {
+    transition: all 0.3s;
+    /* height: 10vh; */
+}
+
+.status-container {
+    text-align: center;
+    width: 100%;
+    height: 20px;
 }
 
 .status {
-    font-size: 25px;
     text-align: center;
+    background-image: linear-gradient(to right, rgb(86, 231, 224) , rgb(63, 235, 91));
+    border-radius: 3px;
+    font-size: 13px;
+    height: 20px;
+    text-align: center;
+}
+
+.mail-compose {
+    display: grid;
+    width: 80vw;
+    height: 60vh;
+}
+
+aside a {
+    padding: 0;
+    margin: 0;
+    width: 0;
+    margin-right: 3vw;
+}
+
+.mail-compose header {
+    background-color: rgb(19, 110, 184);
+    color: whitesmoke;
+    margin: 0;
+}
+
+.mail-compose button {
+    background-color: steelblue;
+    color: whitesmoke;
+    border-radius: 3px;
+    border: 1px solid rgb(222, 235, 203);
+    width: 50px;
+    /* height: 50px; */
+}
+
+.mail-preview span.read-emoji {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.read-btn:focus {
+    border: 0;
+    outline-width: 0;
+    outline-color: inherit;
+    outline-style: none;
+    outline-width: none;
+}
+
+.read-btn {
+    background-color: inherit;
+    border: 0;
+    padding-right: 3%;
+    margin: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.preview-header-container header {
+    padding: 0;
+    justify-content: start;
+}
+
+.preview-header-container header input {
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    margin-left: 20px;
+}
+.preview-header-container header select{
+    border: 1px solid gray;
+    border-radius: 3px;
+    /* font-size: 10px; */
+    height: 1.5em;
+
 }

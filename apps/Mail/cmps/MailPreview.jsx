@@ -4,36 +4,52 @@ const { Link } = ReactRouterDOM;
 export class MailPreview extends React.Component {
 
     state = {
-        currMail:{}
+        currMail: {},
+        hidden: false
 
     }
 
-    componentWillUnmount(){
+    ComponentDidMount() {
         this.loadMail()
     }
 
-    loadMail=()=>{
+    loadMail = () => {
         const mail = this.props.mail
         this.setState({
-            currMail:mail
+            currMail: mail
         })
     }
-
-    changeReadState=(id)=>{
-        console.log(id);
-        mailService.changeState(id)
+    onFav=(id)=>{
+        mailService.setFavs(id)
+        const copyMail = {...this.state.currMail}
+        copyMail.isFav =!copyMail.isFav
+        this.setState({
+            currMail:copyMail
+        }) 
     }
 
+
     render() {
+        // const read = '📭'
+        // const unread = '📫'
+        const close = '📕'
+        const open = '📖'
+        const notFav = '☆'
+        const fav = '★'
         const { mail } = this.props
         const cls = (mail.isRead) ? 'read' : 'unread'
+        const readEmoji = (mail.isRead)? open : close
+        const starEmoji = (mail.isFav)? fav : notFav
         return (
             <section>
-                <Link to={`/mail/${mail.id}`}>
-                    <div onClick={()=>this.changeReadState(mail.id)} className={`${cls} mail-preview`} >
-                        <span>{mail.subject}</span> <p> {mail.body}</p>
+                <div  className={`${cls} mail-preview`} >
+                    <div className="mail-subject">
+                    <button className="read-btn " onClick={()=> this.onFav(mail.id)}><span>{starEmoji}</span></button>
+                        <button onClick={() => this.props.changeState(mail.id)}  className="read-btn" ><span className="read-emoji" > {readEmoji} </span></button>
+                        <span  >{mail.subject}</span>
                     </div>
-                </Link>
+                    <Link to={`/mail/${mail.id}`}> <p onClick={() => this.props.changeState(mail.id)}> {mail.body}</p > </Link>
+                </div>
             </section>
         )
     }

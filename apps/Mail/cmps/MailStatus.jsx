@@ -10,10 +10,13 @@ export class MailStatus extends React.Component {
         const {props} = this.props 
         const prev=prevprops.props.location.pathname
         const curr=props.location.pathname
+        
         if(curr !== prev){
-            this.onChangeStatus()
             this.checkStatus()
         }
+    }
+    get status() {
+        return this.state.status + '%'
     }
 
     componentDidMount() {
@@ -31,16 +34,18 @@ export class MailStatus extends React.Component {
     checkStatus=()=>{
         const {mails} = this.props
         const amount = ((this.state.mailsReaded.length) / (mails.length)) * 100 
-        // console.log('state mails read length',this.state.mailsReaded.length); 
-        // console.log('mails length',mails.length);
         this.setState({
             status:amount.toFixed(0)
-        })
+        },this.onChangeStatus())
     }
 
     render() {
         return (
-            <h1 className="status">{this.state.status}%</h1>
+            <div className="status-container">
+                <div style={{width:this.status}} className="status">
+                {/* {this.state.status}%  */}
+                </div>
+            </div>
         )
     }
 }

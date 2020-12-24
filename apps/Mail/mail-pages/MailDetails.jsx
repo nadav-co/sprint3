@@ -1,5 +1,9 @@
 import { mailService } from "../services/mail-service.js";
+import { bus } from "../../../services/event-bus-service.js";
+const {Link } = ReactRouterDOM;
+
 export class MailDetails extends React.Component {
+    
 
     state = {
         selectedMail: {
@@ -22,18 +26,31 @@ export class MailDetails extends React.Component {
 
     onRemoveMail=()=>{
         const {id} =this.state.selectedMail
-        mailService.removeMail(id)
+      const trash = mailService.removeMail(id)
+    //   mailService.createTrash(trash)
+
+    }
+
+    onEditSubject=(ev)=>{
+        const selectedMail = {...this.state.selectedMail}
+        selectedMail.subject = ev.target.value
+        this.setState({
+            selectedMail
+        })
+        mailService.changeSubject(selectedMail.id,ev.target.value)
+
     }
 
     render() {
-        console.log(this.state.selectedMail);
+
         return (
             <section className="mail-details">
-              {this.state.selectedMail && <p>{this.state.selectedMail.body} </p> }
-                
+                <input onChange={this.onEditSubject} type="text" placeholder="edit subject"/>
+              {this.state.selectedMail && <p>{this.state.selectedMail.subject} </p>  }
+              {this.state.selectedMail && <p>{this.state.selectedMail.body} </p>  }
                     
-                    
-                    <button onClick={this.onRemoveMail}> delete mail</button>
+                  <Link to="/mail/list">  <button onClick={this.onRemoveMail}> delete mail</button> </Link>
+                  <Link to="/mail/list"><button>back</button></Link> 
             
             </section>
         )

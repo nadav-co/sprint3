@@ -22,12 +22,17 @@ export class NoteTodos extends React.Component{
     
     onSave = () =>  keepService.saveChanges(this.props.id, this.props.idx, this.state)
 
+    onDelete = () => {
+        this.setState({type: '',info: ''})
+        keepService.deleteLine(this.props.id, this.props.idx)
+    }
 
     render(){
-        if (!this.state.info) return <h1>loading</h1>
+        if (!this.state.info) return null
         const {info} = this.props
         return(
-            <div className="todos">
+            <div className="note-todos">
+                <button className="delete" onClick={this.onDelete}>x</button>
             <input onChange={this.onInput} name="label" type="text" className="todo-title" value={this.state.info.label}/>
             <ul>
                 {info.todos.map((todo,idx) => <li key={idx}><input onChange={this.onInput} name={idx} type="text" value={this.state.info.todos[idx].txt}/></li>)}

@@ -1,26 +1,163 @@
+.pinned,
+.unpinned {
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.notes-container h2:first-child {
+    padding-left: 40px;
+}
+
 .note {
+    flex-direction: column;
+    justify-content: space-between;
     width: 350px;
     padding: 15px;
-    border: 1px solid rgb(0, 153, 255);
+    border: 2px solid rgb(0, 153, 255);
     background-color: rgb(246, 246, 246);
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
     border-radius: 20px;
 }
 
-.note img {
+.note .actions {
+    align-items: flex-end;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+
+.note .actions img {
+    height: 2em;
+    width: unset;
+}
+
+.note-img img {
+    margin-left: 10px;
     width: 300px;
     border-radius: 20px;
+    margin-top: 10px;
 }
 
 .note textarea {
+    margin-top: 30px;
     background-color: rgb(246, 246, 246);
     border: 0;
-    max-width: 350px;
+    max-width: 300px;
+}
+
+.note-todos {
+    margin-top: 20px;
+    max-width: 300px;
 }
 
 .note input {
     background-color: rgb(246, 246, 246);
     border: 0;
     max-width: 350px;
+}
+
+button.delete {
+    padding-bottom: 4px;
+    align-self: self-start;
+    border: 1px solid rgb(54, 54, 54);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    position: relative;
+    line-height: 1em;
+}
+
+button.delete:focus {
+    outline: 0;
+    background-color: #f84436;
+    color: rgb(238, 238, 238) !important;
+}
+
+.note button.delete {
+    font-size: 1.1em;
+    top: -28px;
+    left: -41px;
+}
+
+li.pin {
+    margin-top: 10px;
+    font-size: 1.7em;
+    margin-right: 180px;
+}
+
+.note-img button.delete {
+    color: #f84436;
+    border: 0;
+    position: relative;
+    top: 18px;
+    left: -3px;
+}
+
+.note-text button.delete {
+    color: #f84436;
+    border: 0;
+    position: relative;
+    top: -28px;
+    left: 0px;
+}
+
+.note-todos button.delete {
+    color: #f84436;
+    border: 0;
+    position: relative;
+    top: -10px;
+    left: 0px;
+}
+
+.add-line {
+    align-items: center;
+    margin-top: 20px;
+    /* margin-top: 100%; */
+}
+
+.add-line input {
+    border: 1px solid rgb(185, 185, 185);
+    padding: 5px 10px;
+    border-radius: 2em;
+    width: 80%;
+}
+
+.add-line button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 2em;
+    border: 0;
+}
+
+.add-line ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.add-line li {
+    padding: 5px;
+}
+
+.add-line li img {
+    height: 2em;
+    width: 2em;
+    border-radius: 0;
+}
+
+.add-line li:not(:first-child) {
+    margin-left: 15px;
+}
+
+.add-line li:hover {
+    cursor: pointer;
+}
+
+
+/* HELPERS */
+
+button:hover {
+    cursor: pointer;
 }

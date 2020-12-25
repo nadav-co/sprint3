@@ -1,5 +1,6 @@
 import { bus } from "../../services/event-bus-service.js"
 import { KeepHeader } from "./cmps/KeepHeader.jsx"
+import { NoteDemo } from "./cmps/NoteDemo.jsx"
 import { NoteList } from "./cmps/NoteList.jsx"
 import { keepService } from "./services/keep-service.js"
 
@@ -7,8 +8,8 @@ export class KeepApp extends React.Component {
 
     state = {
         notes: [],
-        filter:''
-     
+        filter: '',
+        isDemo: false
     }
 
     componentDidMount() {
@@ -28,6 +29,7 @@ export class KeepApp extends React.Component {
         // .then(this.setPinnedNotes)
         // .then(this.setUnpinnedNotes)
     }
+    onToggleDemo = () => this.setState({isDemo: !this.state.isDemo})
 
     getNotesForDisp = () => {
     return this.state.notes.filter(note => note.lines.some(line => {
@@ -49,8 +51,11 @@ export class KeepApp extends React.Component {
 
         return (
             <section>
+                <button className="start-demo" onClick={this.onToggleDemo}>Tutorial</button>
+                <hr/>
                 <KeepHeader />
-                <NoteList onChangeFilter={this.onChangeFilter} pinned={pinned} unPinned={unPinned} />
+                {!this.state.isDemo &&<NoteList onChangeFilter={this.onChangeFilter} pinned={pinned} unPinned={unPinned} />}
+                {this.state.isDemo && <NoteDemo toggleDemo={this.onToggleDemo}/>}
             </section>
         )
     }

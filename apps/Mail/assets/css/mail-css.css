@@ -1,14 +1,23 @@
 * {
     box-sizing: border-box;
 }
+    button{
+        background-color: #fff;
+        border: 0;
+    }
 
+.full-size-icon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
 .mail-details {
     font-size: 1.5em;
     line-height: 30px;
     width: 60%;
     margin-left: 10%;
     margin-top: 15px;
-    
 }
 
 .mail-details button {
@@ -20,58 +29,76 @@
 }
 
 .mail-preview {
+    width: 75vw;
     font-size: 1.1em;
     margin: 5px;
-    overflow: hidden;
-    height: 10vh;
-    line-height: 10vh;
+    padding: 10px;
+    /* overflow: hidden; */
+    /* height: 10vh; */
+    line-height: 5vh;
     border: 0.5px solid rgb(231, 224, 224);
     border-radius: 2px;
-}
-
-aside {
-    padding: 10px 25px;
-    border-radius: 3px;
-    border: 1px solid #ece9e9;
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 10vw;
-    height: 50vh;
-    text-align: center;
     justify-content: space-between;
-    align-items: center;
+    /* -webkit-line-clamp: 2; */
+    /* -webkit-box-orient: vertical; */
+    /* overflow: hidden; */
+
 }
 
 .mails-container {
-    margin-left: 10vw;
+    margin-left: 15vw;
+    border-left: 1px solid rgb(184, 184, 184);
 }
 
+
+.date{
+    font-size: 10px !important;
+    /* display: inline !important; */
+    align-content: start;
+    display: flex;
+}
 .mail-subject {
-    display: inline;
-    width: 100px;
-    margin-right: 50px;
+    align-self: center;
+    /* display: inline; */
+    display: flex;
+    /* width: 100px; */
+    margin-right: 40px;
 }
 
 .unread {
     background-color: rgb(236 235 235 / 62%);
     border-radius: 3px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .read {
     background-color: rgb(255, 255, 255);
 }
 
-.mail-preview span {
-    padding: 5px;
+.mail-subject span{
+    /* padding: 5px; */
     margin-right: 30px;
-    font-size: 1.3em;
+    font-weight: 700;
+    font-size: 1em;
     color: rgb(82, 81, 81);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.mail-body{
+    /* display: inline; */
+    cursor: pointer;
+    align-self: center;
+    
+    /* width: 100px; */
+    /* margin-right: 50px; */
+}
+.mail-body p{
+    /* margin-right: 40px; */
+}
 .mail-preview p {
+    padding-right: 40px;
+    margin-right: 40px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -80,27 +107,82 @@ aside {
 
 .main-contant {
     display: flex;
+    max-width: 1167px;
 }
 
-.btn {
-    width: 3vw;
-    cursor: pointer;
+.aside:first-child {
+    margin-top: 50px;
 }
 
-.add-link:hover {
-    width: 2vw;
+.aside {
+    width: 14vw;
+    position: fixed;
+}
+
+.aside-title {
+    align-self: center;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.page-nav.compose{
+    /* background-color: lightblue; */
+    margin: 0;
+}
+.add-link.compose{
+    border: 1px solid rgb(189, 187, 187);
+    border-radius:50px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+.add-btn.btn.compose{
+    text-align: center;
+    font-size:20px;
+    margin-right: 30px;
+}
+.aside-title.compose{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+
+.add-link:hover{
+    border-radius: 3px;
+    background-color: rgb(226, 224, 224);
+
 }
 
 .add-link {
-    transition: all 0.3s;
+    padding: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-left: 2vw;
+    font-size: 10px;
+    transition: all 0.2s;
+
 }
 
+.add-link span {
+    align-self: center;
+}
+
+.btn {
+    width: 3em;
+    cursor: pointer;
+}
+
+
+
+
+
+
 .add-btn.btn:hover {
-    width: 5vw;
+    /* width: 5vw; */
 }
 
 .add-btn.btn {
     transition: all 0.3s;
+    margin-right: 40px;
     /* height: 10vh; */
 }
 
@@ -112,7 +194,7 @@ aside {
 
 .status {
     text-align: center;
-    background-image: linear-gradient(to right, rgb(86, 231, 224) , rgb(63, 235, 91));
+    background-image: linear-gradient(to right, rgb(86, 231, 224), rgb(63, 235, 91));
     border-radius: 3px;
     font-size: 13px;
     height: 20px;
@@ -148,8 +230,8 @@ aside a {
 }
 
 .mail-preview span.read-emoji {
-    font-size: 1em;
-    cursor: pointer;
+    /* font-size: 1em; */
+    /* cursor: pointer; */
 }
 
 .read-btn:focus {
@@ -163,10 +245,10 @@ aside a {
 .read-btn {
     background-color: inherit;
     border: 0;
-    padding-right: 3%;
     margin: 0;
     width: 0;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .preview-header-container header {
@@ -180,10 +262,12 @@ aside a {
     border: 1px solid grey;
     margin-left: 20px;
 }
-.preview-header-container header select{
+
+.preview-header-container header select {
     border: 1px solid gray;
     border-radius: 3px;
     /* font-size: 10px; */
     height: 1.5em;
-
 }
+
+/* @media() */

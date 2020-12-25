@@ -82,9 +82,13 @@ header {
     margin: 0px 30px;
     list-style: none;
     text-decoration: none;
-}
+  }
+  .navbar a {
+    color:#dd4f43;
 
-a {
+  }
+  
+  a {
     color: rgb(56, 54, 54);
     text-decoration: none;
 }

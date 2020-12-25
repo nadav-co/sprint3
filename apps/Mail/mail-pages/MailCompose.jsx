@@ -14,6 +14,9 @@ export class MailCompose extends React.Component {
     }
 
 
+
+
+
     handleChange = (ev) => {
         const info = { ...this.state.info }
         const name = ev.target.name
@@ -24,7 +27,6 @@ export class MailCompose extends React.Component {
         })
     }
 
-
     onSubmitCompose = (ev) => {
         // ev.preventDefault()
         const { info } = this.state
@@ -34,6 +36,7 @@ export class MailCompose extends React.Component {
 
 
     render() {
+        console.log(this.promps);
         return (
             <section>
                 <form className="mail-compose" action="">

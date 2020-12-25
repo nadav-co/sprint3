@@ -38,6 +38,10 @@ export class MailList extends React.Component {
         mailService.changeState(id)
         this.loadMails()
     }
+    toggleReadState = (id) => {
+        mailService.toggleState(id)
+        this.loadMails()
+    }
 
     onFilterReadUnread = (ev) => {
         const value = ev.target.value
@@ -52,7 +56,7 @@ export class MailList extends React.Component {
             <section className="preview-header-container">
                 <header>
                     <select onChange={this.onFilterReadUnread} name="" id="">
-                        <option value="">filter read/unread</option>
+                        <option value="all">filter read/unread</option>
                         <option value="read">read</option>
                         <option value="unread">unread</option>
                     </select>
@@ -60,7 +64,7 @@ export class MailList extends React.Component {
                 </header>
 
                 {this.state.mails.map(mail => {
-                    return <MailPreview changeState={this.changeReadState} key={mail.body} mail={mail} />
+                    return <MailPreview toggleState={this.toggleReadState} changeState={this.changeReadState} key={mail.body} mail={mail} />
                 })}
             </section>
         )

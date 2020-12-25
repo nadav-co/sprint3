@@ -41,7 +41,8 @@ export class MailApp extends React.Component {
             <section>
                 <div className="main-contant">
             <div className="aside">
-                <div className="page-nav" ><Link to="/mail/add" className="add-link" > <img className="add-btn btn" src="../assets/img/add.jpg" /> <div className="aside-title">Compose</div>  </Link></div>
+                <div className="page-nav compose" ><Link to="/mail/compose" className="add-link compose" > <img className="add-btn btn compose" src="../assets/img/add.png" /> <div className="aside-title compose">Compose</div>  </Link></div>
+                <div className="page-nav" ><Link to="/mail/list" className="add-link" > <img className="add-btn btn" src="../assets/img/inbox.jpg" /> <div className="aside-title">Inbox</div>  </Link></div>
                 <div className="page-nav" ><Link to="/mail/favs" className="add-link"> <img  onClick={this.onFilterFavs} className= "add-btn btn" src="../assets/img/star.jpg" /><div className="aside-title">Marked</div> </Link></div>
                 <div className="page-nav"> <Link to="/mail/trash" className="add-link"> <img src="../assets/img/trash.jpg" alt=""  className="add-btn btn"/> <div className="aside-title">Trash</div>  </Link> </div>
                     <MailStatus  mails={this.state.mails} props={this.props} />
@@ -49,10 +50,10 @@ export class MailApp extends React.Component {
                 <div className="mails-container">
                 <Switch>
                     <Route path="/mail/list" component={MailList} />
-                    <Route path="/mail/add" component={MailCompose} />
+                    <Route path="/mail/compose/:noteId?" component={MailCompose} />
                     <Route path="/mail/favs" component={MailFavs}/>
                     <Route path="/mail/trash" component={MailTrash}/>
-                    <Route path="/mail/:mailId" component={MailDetails} />
+                    <Route path="/mail/:mailId/" component={MailDetails} />
                 </Switch>
                 </div>
                 </div>

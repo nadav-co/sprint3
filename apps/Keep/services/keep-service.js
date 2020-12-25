@@ -14,7 +14,8 @@ const KEY = 'notes'
 
 
 
-var gNotes = [{
+var gNotes = [
+    {
         isPinned: true,
         id: utils.makeId(),
         lines: [{
@@ -45,6 +46,7 @@ var gNotes = [{
 
         ]
     },
+
     {
         isPinned: false,
         id: utils.makeId(),

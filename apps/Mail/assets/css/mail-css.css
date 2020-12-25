@@ -6,18 +6,47 @@
         border: 0;
     }
 
+    .inbox-state img{
+        width: 25px;
+        height: 25px;
+    }
+
 .full-size-icon{
     cursor: pointer;
     width: 30px;
     height: 30px;
     align-self: center;
 }
+.mail-preview.fav{
+
+    background-color: rgb(214, 214, 238) !important
+
+}
+
+.inbox-state{
+    display: flex;
+    width: 8vw;
+    background-color: rgb(215, 215, 223);
+    padding: 4px;
+    font-size: 0.9em;
+    border-radius: 15px;
+    font-family:system-ui,'serif' ;
+    justify-content: space-between;
+}
+.inbox{
+    align-self: center;
+    padding-right: 10px;
+}
+
+
 .mail-details {
     font-size: 1.5em;
     line-height: 30px;
-    width: 60%;
+    width: 80%;
     margin-left: 10%;
     margin-top: 15px;
+    background-color: rgb(224, 219, 219);
+    padding: 20px;
 }
 
 .mail-details button {
@@ -29,6 +58,7 @@
 }
 
 .mail-preview {
+    
     width: 75vw;
     font-size: 1.1em;
     margin: 5px;
@@ -47,8 +77,13 @@
 }
 
 .mails-container {
-    margin-left: 15vw;
-    border-left: 1px solid rgb(184, 184, 184);
+    margin-left: 200px;
+    background-image: url('../../../../assets/img/mail-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position-y: 50px;
+ 
 }
 
 
@@ -108,15 +143,17 @@
 .main-contant {
     display: flex;
     max-width: 1167px;
+
 }
 
-.aside:first-child {
-    margin-top: 50px;
-}
 
 .aside {
-    width: 14vw;
+    width: 190px;
     position: fixed;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .aside-title {
@@ -131,7 +168,7 @@
 }
 .add-link.compose{
     border: 1px solid rgb(189, 187, 187);
-    border-radius:50px;
+    border-radius:4em;
     margin: 0;
     margin-bottom: 8px;
 }
@@ -146,8 +183,10 @@
 }
 
 
+/* check with shachar for border radius */
+
 .add-link:hover{
-    border-radius: 3px;
+    /* border-radius: 3px; */
     background-color: rgb(226, 224, 224);
 
 }
@@ -156,7 +195,7 @@
     padding: 4px;
     margin-bottom: 10px;
     display: flex;
-    margin-left: 2vw;
+    margin-left:20px;
     font-size: 10px;
     transition: all 0.2s;
 
@@ -203,8 +242,8 @@
 
 .mail-compose {
     display: grid;
-    width: 80vw;
-    height: 60vh;
+    width: 60vw;
+    height: 68vh;
 }
 
 aside a {
@@ -220,14 +259,6 @@ aside a {
     margin: 0;
 }
 
-.mail-compose button {
-    background-color: steelblue;
-    color: whitesmoke;
-    border-radius: 3px;
-    border: 1px solid rgb(222, 235, 203);
-    width: 50px;
-    /* height: 50px; */
-}
 
 .mail-preview span.read-emoji {
     /* font-size: 1em; */
@@ -270,4 +301,49 @@ aside a {
     height: 1.5em;
 }
 
-/* @media() */
+
+.send-btn{
+    color: rgb(250, 246, 246);
+    margin-top: 1px;
+    background-color:  rgb(19, 110, 184);
+    width: 50px;
+    height: 25px;
+    border-radius: 3px;
+    margin-left: 94%;
+}
+
+@media(max-width:500px){
+    header.flex{
+        display: block;
+    }
+    header{
+    }
+    .main-contant{
+        display: block;
+
+    }
+    .aside{
+        position: static;
+        display: block;
+        width: auto;
+    }
+    .mails-container{
+        max-width: 400px;
+        width: 0;
+        margin: 0;
+
+    }
+
+
+
+    .mail-preview{
+        width: 100vw;
+        /* width:0;
+        font-size: auto;
+        margin: 0;
+        padding: 0;
+        overflow: none;
+        height: 0;
+         */
+    }
+}

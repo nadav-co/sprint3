@@ -48,11 +48,11 @@ export class MailPreview extends React.Component {
         const cls = (mail.isRead) ? 'read' : 'unread'
         const readEmoji = (mail.isRead) ? open : close
         const starEmoji = (mail.isFav) ? fav : notFav
-        const {date} = mail.sentAt
+        const date = mail.sentAt
         const { letterCount } = this.state
         return (
             <section>
-                <div className={`${cls} mail-preview`} >
+                <div className={`${cls} mail-preview `} >
                     <div className="mail-subject">
                         <button className="read-btn " onClick={() => this.onFav(mail.id)}><span>{starEmoji}</span></button>
                         <button className="read-btn" onClick={() => this.props.toggleState(mail.id)}  ><span  > {readEmoji} </span></button>
@@ -62,6 +62,7 @@ export class MailPreview extends React.Component {
                     <div className="date" > <Link onClick={() => this.props.changeState(mail.id)} to={`/mail/${mail.id}`}> <img className="full-size-icon" src="../../assets/img/full-size.jpg" alt="" /> </Link>{date}</div>
                 </div>
             </section>
+
         )
     }
 

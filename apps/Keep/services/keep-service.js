@@ -7,7 +7,8 @@ export const keepService = {
     deleteLine,
     deleteNote,
     addData,
-    saveNoteChange
+    saveNoteChange,
+    getNoteById
 }
 
 const KEY = 'notes'
@@ -103,6 +104,10 @@ function saveChanges(id, idx, line) {
 
 function _getIdxById(id) {
     return gNotes.findIndex(note => note.id === id)
+}
+
+function getNoteById(id){
+    return gNotes[_getIdxById(id)]
 }
 
 function deleteLine(id, idx) {

@@ -121,12 +121,9 @@ function deleteNote(id) {
 function saveNoteChange(note) {
     const notesCopy = [...gNotes]
     let idx = _getIdxById(note.id)
-    console.log(idx)
-    console.log(idx)
     notesCopy.splice(idx, 1, note)
     gNotes = notesCopy
     storageService.saveToStorage(KEY, gNotes)
-    console.log(gNotes)
     return Promise.resolve()
 }
 

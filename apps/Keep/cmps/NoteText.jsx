@@ -25,12 +25,13 @@ export class NoteText extends React.Component{
     }
 
     render(){
+        const backgroundColor = this.props.colors ? this.props.colors.backgroundColor : 'rgb(246, 246, 246)'
         const txt = this.state.info
         if (!this.state.type) return null
         return (
         <div className="note-text">
             <button className="delete" onClick={this.onDelete}>x</button>
-            <textarea name="text" id="" value={txt} onChange={this.onInput}></textarea>
+            <textarea style={{backgroundColor}} name="text" id="" value={txt} onChange={this.onInput}></textarea>
         </div>
             
         )

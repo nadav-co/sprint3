@@ -1,11 +1,12 @@
+@import '../css/animates.css';
 .pinned,
 .unpinned {
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    margin-top: 130px;
 }
 
-.notes-container h2:first-child {
-    padding-left: 40px;
+.notes-container h2 {
+    padding-left: 20px;
 }
 
 .note {
@@ -30,11 +31,20 @@
 }
 
 .note .actions img {
+    cursor: pointer;
     height: 2em;
     width: unset;
 }
 
 .note-img img {
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.note-video video {
+    object-fit: contain;
     margin-left: 10px;
     width: 300px;
     border-radius: 20px;
@@ -82,12 +92,21 @@ button.delete:focus {
 }
 
 li.pin {
+    cursor: pointer;
     margin-top: 10px;
     font-size: 1.7em;
     margin-right: 180px;
 }
 
 .note-img button.delete {
+    color: #f84436;
+    border: 0;
+    position: relative;
+    top: 18px;
+    left: -3px;
+}
+
+.note-video button.delete {
     color: #f84436;
     border: 0;
     position: relative;
@@ -113,19 +132,20 @@ li.pin {
 
 .add-line {
     align-items: center;
-    margin-top: 20px;
-    /* margin-top: 100%; */
+    margin-top: 1.4em;
 }
 
 .add-line input {
+    font-size: 0.8em;
     border: 1px solid rgb(185, 185, 185);
-    padding: 5px 10px;
+    padding: 0.35em 0.7em;
     border-radius: 2em;
     width: 80%;
 }
 
 .add-line button {
-    padding: 5px 10px;
+    font-size: 0.9em;
+    padding: 0.35em 0.7em;
     margin-left: 10px;
     border-radius: 2em;
     border: 0;
@@ -135,6 +155,7 @@ li.pin {
     list-style: none;
     padding: 0;
     margin-bottom: 0;
+    margin-top: 0.7em;
 }
 
 .add-line li {
@@ -142,8 +163,8 @@ li.pin {
 }
 
 .add-line li img {
-    height: 2em;
-    width: 2em;
+    height: 2rem;
+    width: 2rem;
     border-radius: 0;
 }
 
@@ -156,7 +177,42 @@ li.pin {
 }
 
 
+/* TODOS */
+
+.is-done {
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 1em;
+}
+
+.note-todos li {
+    padding: 5px;
+}
+
+
+/* HEADER */
+
+input.search-bar {
+    margin: 20px 0 0 15px;
+    font-size: 1.2rem;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 0.35em 0.7em;
+    border-radius: 2em;
+    width: 365px;
+}
+
+
 /* HELPERS */
+
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
 
 button:hover {
     cursor: pointer;

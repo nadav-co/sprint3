@@ -41,7 +41,7 @@ export class MailApp extends React.Component {
             <section>
                 <div className="main-contant">
                 <aside>
-                    <Link to="/mail/add" className="add-link" ><img className="add-btn btn" src="../assets/img/add.jpg" /> </Link>
+                    <Link to="/mail/compose/:noteId?" className="add-link" ><img className="add-btn btn" src="../assets/img/add.jpg" /> </Link>
                     <Link to="/mail/favs" className="add-link"><img  onClick={this.onFilterFavs} className= "add-btn btn" src="../assets/img/star.jpg" /></Link>
                     <Link to="/mail/trash" className="add-link"> <img src="../assets/img/trash.jpg" alt=""  className="add-btn btn"/></Link>
                     <MailStatus  mails={this.state.mails} props={this.props} />
@@ -49,7 +49,7 @@ export class MailApp extends React.Component {
                 <div className="mails-container">
                 <Switch>
                     <Route path="/mail/list" component={MailList} />
-                    <Route path="/mail/add" component={MailCompose} />
+                    <Route path="/mail/compose/:noteId?" component={MailCompose} />
                     <Route path="/mail/favs" component={MailFavs}/>
                     <Route path="/mail/trash" component={MailTrash}/>
                     <Route path="/mail/:mailId" component={MailDetails} />

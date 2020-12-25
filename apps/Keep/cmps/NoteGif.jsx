@@ -1,9 +1,9 @@
 import { keepService } from "../services/keep-service.js"
 
-export class NoteImg extends React.Component {
+export class NoteGif extends React.Component {
 
     state = {
-        isDeleted:false 
+        isDeleted: false
     }
 
     onDelete = () => {
@@ -14,9 +14,12 @@ export class NoteImg extends React.Component {
     render(){
         if (this.state.isDeleted) return null
         return(
-        <div className="note-img">
+        <div className="note-video">
             <button className="delete" onClick={this.onDelete}>x</button>
-            <img src={this.props.info} alt=""/>
+            <video autoPlay loop>
+                <source src={this.props.info} type="video/mp4" />
+                <source src={this.props.info} type="video/ogg" />
+            </video>
         </div>
         )
     }

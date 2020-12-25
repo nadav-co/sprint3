@@ -7,6 +7,7 @@ export class KeepApp extends React.Component {
 
     state = {
         notes: [],
+        filter:''
      
     }
 
@@ -28,21 +29,28 @@ export class KeepApp extends React.Component {
         // .then(this.setUnpinnedNotes)
     }
 
-    
+    getNotesForDisp = () => {
+    return this.state.notes.filter(note => note.lines.some(line => {
+        var {info} = line
+        if (typeof info === 'string') return info.toLowerCase().includes(this.state.filter)
+        else if (info.todos) return info.todos.some(todo => todo.txt.toLowerCase().includes(this.state.filter) )
+    }))
+    }
 
-
-
-     
+    onChangeFilter = (filter) => {
+        this.setState({filter})
+    }
 
     render() {
         if (!this.state.notes ) return <h1>Loading...</h1>
-        const pinned = this.state.notes.filter(note => note.isPinned)
-        const unPinned = this.state.notes.filter(note => !note.isPinned)
+        const notes = this.getNotesForDisp()
+        const pinned = notes.filter(note => note.isPinned)
+        const unPinned = notes.filter(note => !note.isPinned)
 
         return (
             <section>
                 <KeepHeader />
-                <NoteList pinned={pinned} unPinned={unPinned} />
+                <NoteList onChangeFilter={this.onChangeFilter} pinned={pinned} unPinned={unPinned} />
             </section>
         )
     }

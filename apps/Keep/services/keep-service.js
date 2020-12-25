@@ -7,7 +7,8 @@ export const keepService = {
     deleteLine,
     deleteNote,
     addData,
-    saveNoteChange
+    saveNoteChange,
+    getNoteById
 }
 
 const KEY = 'notes'
@@ -105,6 +106,10 @@ function _getIdxById(id) {
     return gNotes.findIndex(note => note.id === id)
 }
 
+function getNoteById(id){
+    return gNotes[_getIdxById(id)]
+}
+
 function deleteLine(id, idx) {
     const notesCopy = [...gNotes]
     const note = notesCopy[_getIdxById(id)]
@@ -123,12 +128,9 @@ function deleteNote(id) {
 function saveNoteChange(note) {
     const notesCopy = [...gNotes]
     let idx = _getIdxById(note.id)
-    console.log(idx)
-    console.log(idx)
     notesCopy.splice(idx, 1, note)
     gNotes = notesCopy
     storageService.saveToStorage(KEY, gNotes)
-    console.log(gNotes)
     return Promise.resolve()
 }
 

@@ -1,20 +1,24 @@
+import { NoteGif } from "./NoteGif.jsx";
 import { NoteImg } from "./NoteImg.jsx";
 import { NoteText } from "./NoteText.jsx";
 import { NoteTodos } from "./NoteTodos.jsx";
+import { NoteVideo } from "./NoteVideo.jsx";
 
 export function DynamicCmp(props){
-    const {id} = props
-    const {idx} = props
-    const {line} = props
-    const {info} = line
+    const {id, idx, line, colors} = props
+
     switch (line.type) {
     
         case 'NoteText':
-            return <NoteText id={id} info={info}  idx={idx}/>
+            return <NoteText colors={colors}  id={id} info={line.info}  idx={idx}/>
         case 'NoteImg':
-            return <NoteImg id={id} info={info} idx={idx}/>
+            return <NoteImg id={id} info={line.info} idx={idx}/>
+        case 'NoteVideo':
+            return <NoteVideo id={id} info={line.info} idx={idx}/>
+        case 'NoteGif':
+            return <NoteGif id={id} info={line.info} idx={idx}/>
         case 'NoteTodos':
-            return <NoteTodos id={id} info={info} idx={idx}/>
+            return <NoteTodos colors={colors} id={id} info={line.info} idx={idx}/>
     }
     return null
 }

@@ -1,4 +1,4 @@
-import {storageService} from "../../../services/storage-service.js"
+import { storageService } from "../../../services/storage-service.js"
 import { utils } from '../../../lib/utils.js'
 export const mailService = {
     query,
@@ -15,7 +15,6 @@ export const mailService = {
     toggleState
 }
 var time = new Date(Date.now()).toDateString()
-console.log(time)
 var trash = []
 const KEY = 'EMAILS'
 var gMails = [
@@ -37,12 +36,11 @@ var gMails = [
 
 function query(name = '') {
     const storageMails = storageService.loadFromStorage(KEY)
-    if(!storageMails || storageMails.length=== 0 ){
+    if (!storageMails || storageMails.length === 0) {
         const filterRegex = new RegExp(name, 'i');
         const mails = gMails.filter(mail => filterRegex.test(mail.subject))
         return mails
-    }
-    else{
+    } else {
 
         return gMails = storageMails
     }
@@ -56,25 +54,26 @@ function getMailById(id) {
 function changeState(id) {
     const currMail = getMailById(id)
     currMail.isRead = true
-    storageService.saveToStorage(KEY,gMails)
-    
+    storageService.saveToStorage(KEY, gMails)
+
 }
 
 function toggleState(id) {
     const currMail = getMailById(id)
-    currMail.isRead = !currMail.isRead 
-    storageService.saveToStorage(KEY,gMails)
+    currMail.isRead = !currMail.isRead
+    storageService.saveToStorage(KEY, gMails)
 
 }
 
 function removeMail(id) {
     const currMailIdx = gMails.findIndex(mail => mail.id === id)
-    const trashMail=  gMails.splice(currMailIdx, 1)[0]
+    const trashMail = gMails.splice(currMailIdx, 1)[0]
     trash.unshift(trashMail)
-    storageService.saveToStorage(KEY,gMails)
+    storageService.saveToStorage(KEY, gMails)
     return trash
 }
-function getTrash(){
+
+function getTrash() {
     return trash
 }
 
@@ -87,34 +86,41 @@ function submitCompose(newMail) {
     const today = new Date(Date.now()) 
     const mail = { id: utils.makeId(), ...newMail, isRead: false, sentAt: today.toDateString() }
     gMails.unshift(mail)
-    storageService.saveToStorage(KEY,gMails)
+    storageService.saveToStorage(KEY, gMails)
 }
 
-function changeSubject(id,value){
+function changeSubject(id, value) {
     const mail = getMailById(id)
-    mail.subject=value
-    storageService.saveToStorage(KEY,gMails)
+    mail.subject = value
+    storageService.saveToStorage(KEY, gMails)
 
 }
-function filterReadUnread(value){
+
+function filterReadUnread(value) {
     var isTrue;
-     if(value==='all') return gMails
-    else if(value === 'read') isTrue = true
-    else isTrue=false
-    const readMails = gMails.filter(mail=>mail.isRead===isTrue)
-    storageService.saveToStorage(KEY,gMails)
+    if (value === 'all') return gMails
+    else if (value === 'read') isTrue = true
+    else isTrue = false
+    const readMails = gMails.filter(mail => mail.isRead === isTrue)
+    storageService.saveToStorage(KEY, gMails)
     return readMails
-}
-function setFavs(id){
-    const favsMail = gMails.find(mail=> mail.id === id)
-    favsMail.isFav = !favsMail.isFav 
-    storageService.saveToStorage(KEY,gMails)
-    
 }
 
 function getFavsMails(){
     const favsMails = gMails.filter(mail=> mail.isFav===true)
     storageService.saveToStorage(KEY,gMails)
     return favsMails
+
+}
+function setFavs(id) {
+    const favsMail = gMails.find(mail => mail.id === id)
+    favsMail.isFav = !favsMail.isFav
+    storageService.saveToStorage(KEY, gMails)
+
 }
 
+function getFavsMails() {
+    const favsMails = gMails.filter(mail => mail.isFav === true)
+    storageService.saveToStorage(KEY, gMails)
+    return favsMails
+}

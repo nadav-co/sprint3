@@ -1,6 +1,7 @@
 import { mailService } from "../services/mail-service.js";
 import { MailDetails } from "./MailDetails.jsx"
 import { MailStatus } from "../cmps/MailStatus.jsx"
+import { MailList } from "../cmps/MailList.jsx"
 import { MailCompose } from "./MailCompose.jsx"
 import { MailFavs } from "./MailFavs.jsx"
 import { MailTrash } from "./MailTrash.jsx"
@@ -49,6 +50,7 @@ export class MailApp extends React.Component {
                 <div className="mails-container">
                 <Switch>
                     
+                    <Route path="/mail/list" component={MailList} />
                     <Route path="/mail/compose/:noteId?" component={MailCompose} />
                     <Route path="/mail/favs" component={MailFavs}/>
                     <Route path="/mail/trash" component={MailTrash}/>

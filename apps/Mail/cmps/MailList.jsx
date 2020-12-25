@@ -15,6 +15,7 @@ export class MailList extends React.Component {
 
     componentDidMount() {
         this.loadMails()
+        console.log('im here');
     }
 
     loadMails = () => {

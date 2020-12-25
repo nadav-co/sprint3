@@ -16,9 +16,10 @@ export class MailList extends React.Component {
     componentDidMount() {
         this.loadMails()
     }
-
+    
     loadMails = () => {
         const mails = mailService.query(this.state.filterBySub)
+        console.log(mails);
         this.setState({
             mails
         })
@@ -56,9 +57,9 @@ export class MailList extends React.Component {
             <section className="preview-header-container">
                 <header>
                     <select onChange={this.onFilterReadUnread} name="" id="">
-                        <option value="all">filter read/unread</option>
-                        <option value="read">read</option>
-                        <option value="unread">unread</option>
+                        <option value="all">All</option>
+                        <option value="read">Read</option>
+                        <option value="unread">Unread</option>
                     </select>
                     <input name="search-bar" onChange={this.onFilterMails} type="text" placeholder="search" />
                 </header>

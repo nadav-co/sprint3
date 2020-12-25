@@ -41,7 +41,7 @@ export class MailApp extends React.Component {
             <section>
                 <div className="main-contant">
             <div className="aside">
-                <div className="page-nav compose" ><Link to="/mail/compose" className="add-link compose" > <img className="add-btn btn compose" src="../assets/img/add.png" /> <div className="aside-title compose">Compose</div>  </Link></div>
+                <div className="page-nav compose" ><Link to="/mail/compose/:noteId?" className="add-link compose" > <img className="add-btn btn compose" src="../assets/img/add.png" /> <div className="aside-title compose">Compose</div>  </Link></div>
                 <div className="page-nav" ><Link to="/mail/list" className="add-link" > <img className="add-btn btn" src="../assets/img/inbox.jpg" /> <div className="aside-title">Inbox</div>  </Link></div>
                 <div className="page-nav" ><Link to="/mail/favs" className="add-link"> <img  onClick={this.onFilterFavs} className= "add-btn btn" src="../assets/img/star.jpg" /><div className="aside-title">Marked</div> </Link></div>
                 <div className="page-nav"> <Link to="/mail/trash" className="add-link"> <img src="../assets/img/trash.jpg" alt=""  className="add-btn btn"/> <div className="aside-title">Trash</div>  </Link> </div>

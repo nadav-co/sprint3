@@ -8,7 +8,6 @@
     width: 60%;
     margin-left: 10%;
     margin-top: 15px;
-    
 }
 
 .mail-details button {
@@ -29,22 +28,9 @@
     border-radius: 2px;
 }
 
-aside {
-    padding: 10px 25px;
-    border-radius: 3px;
-    border: 1px solid #ece9e9;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 10vw;
-    height: 50vh;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .mails-container {
-    margin-left: 10vw;
+    margin-left: 15vw;
+    border-left: 1px solid rgb(184, 184, 184);
 }
 
 .mail-subject {
@@ -80,16 +66,48 @@ aside {
 
 .main-contant {
     display: flex;
+    max-width: 1167px;
+}
+
+.aside:first-child {
+    margin-top: 50px;
+}
+
+.aside {
+    width: 15vw;
+    position: fixed;
+}
+
+.aside-title {
+    align-self: center;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.add-link: {
+    font-size: 20px;
+}
+
+.add-link {
+    margin-bottom: 25px;
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 2vw;
+    font-size: 10px;
+}
+
+.add-link span {
+    align-self: center;
 }
 
 .btn {
-    width: 3vw;
+    width: 3em;
     cursor: pointer;
 }
 
-.add-link:hover {
+/* .add-link:hover {
     width: 2vw;
-}
+} */
 
 .add-link {
     transition: all 0.3s;
@@ -101,6 +119,7 @@ aside {
 
 .add-btn.btn {
     transition: all 0.3s;
+    margin-right: 40px;
     /* height: 10vh; */
 }
 
@@ -112,7 +131,7 @@ aside {
 
 .status {
     text-align: center;
-    background-image: linear-gradient(to right, rgb(86, 231, 224) , rgb(63, 235, 91));
+    background-image: linear-gradient(to right, rgb(86, 231, 224), rgb(63, 235, 91));
     border-radius: 3px;
     font-size: 13px;
     height: 20px;
@@ -180,10 +199,10 @@ aside a {
     border: 1px solid grey;
     margin-left: 20px;
 }
-.preview-header-container header select{
+
+.preview-header-container header select {
     border: 1px solid gray;
     border-radius: 3px;
     /* font-size: 10px; */
     height: 1.5em;
-
 }

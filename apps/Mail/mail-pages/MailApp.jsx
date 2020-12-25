@@ -40,12 +40,12 @@ export class MailApp extends React.Component {
         return (
             <section>
                 <div className="main-contant">
-                <aside>
-                    <Link to="/mail/add" className="add-link" ><img className="add-btn btn" src="../assets/img/add.jpg" /> </Link>
-                    <Link to="/mail/favs" className="add-link"><img  onClick={this.onFilterFavs} className= "add-btn btn" src="../assets/img/star.jpg" /></Link>
-                    <Link to="/mail/trash" className="add-link"> <img src="../assets/img/trash.jpg" alt=""  className="add-btn btn"/></Link>
+            <div className="aside">
+                <div className="page-nav" ><Link to="/mail/add" className="add-link" > <img className="add-btn btn" src="../assets/img/add.jpg" /> <div className="aside-title">Compose</div>  </Link></div>
+                <div className="page-nav" ><Link to="/mail/favs" className="add-link"> <img  onClick={this.onFilterFavs} className= "add-btn btn" src="../assets/img/star.jpg" /><div className="aside-title">Marked</div> </Link></div>
+                <div className="page-nav"> <Link to="/mail/trash" className="add-link"> <img src="../assets/img/trash.jpg" alt=""  className="add-btn btn"/> <div className="aside-title">Trash</div>  </Link> </div>
                     <MailStatus  mails={this.state.mails} props={this.props} />
-                </aside>
+            </div>
                 <div className="mails-container">
                 <Switch>
                     <Route path="/mail/list" component={MailList} />

@@ -1,5 +1,5 @@
-const { Link } = ReactRouterDOM;
-import homeMail from '../assets/img/home-mail.jpg'
+const { Link } = ReactRouterDOM
+const homeMail = require('../assets/img/home-mail.jpg')
 
 
 export class Home extends React.Component {

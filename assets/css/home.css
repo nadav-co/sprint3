@@ -62,7 +62,7 @@
 
 .home-img img:hover {
     background-color: rgb(141, 138, 138);
-    /* border-radius: 10px; */
+    border-radius: 10px;
     box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
 }
 

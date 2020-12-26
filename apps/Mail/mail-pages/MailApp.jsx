@@ -40,7 +40,7 @@ export class MailApp extends React.Component {
         const cls = (this.state.active) ? 'active' : ''
         return (
             <section>
-                <nav>
+                <nav className="humburger">
                     <img onClick={this.toggleNav} className="hamburger-icon" src="./assets/img/hamburger-icon.jpg" alt="" />
                 </nav>
                 <div className={`phone-nav ${cls}`}>

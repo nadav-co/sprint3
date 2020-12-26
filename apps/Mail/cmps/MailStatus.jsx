@@ -30,7 +30,7 @@ export class MailStatus extends React.Component {
         })
     }
     checkStatus = () => {
-        const { mails } = this.props
+        const mails = mailService.query()
         const amount = ((this.state.mailsReaded.length) / (mails.length)) * 100
         this.setState({
             status: amount.toFixed(0)

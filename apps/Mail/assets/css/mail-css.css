@@ -60,6 +60,7 @@ button {
     background-color: rgb(235, 229, 229);
     padding: 20px;
     border-radius: 5px;
+    height: 100%;
 }
 
 .mail-details button {
@@ -310,16 +311,19 @@ aside a {
 .send-btn.cancel {
     width: 30px;
     height: 30px;
+    position: relative;
+    top: -40px;
+    left: 30px;
 }
 
-nav {
+.humburger {
     display: flex;
     display: none;
 }
 
 .hamburger-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: relative;
     cursor: pointer;
 }
@@ -329,7 +333,14 @@ nav {
 }
 
 @media(max-width:700px) {
-    nav {
+    header .inbox-state{
+        width: 50vw;
+        padding: 8px;
+    }
+    .preview-header-container header input {
+        width: 50vw;
+    }
+    .humburger {
         width: 90vw;
         display: flex;
     }
@@ -369,7 +380,7 @@ nav {
     }
     .main-contant {
         display: block;
-        width: 94vw;
+        width: 93vw;
     }
     .aside {
         position: static;
@@ -381,12 +392,12 @@ nav {
         margin: 0;
     }
     .mail-preview {
-        width: 94vw;
+        width: 93vw;
         padding: 0;
         margin: 0;
         display: block;
     }
     .mail-details {
-        width: 94vw;
+        width: 93vw;
     }
 }

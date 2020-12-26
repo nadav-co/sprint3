@@ -357,9 +357,31 @@ aside a {
 }
 
 @media(max-width:700px) {
+    .main-footer{
+        display: none !important;
+    }
+    .mail-list-container{
+        overflow: visible;
+        height: 100vh;
+    }
     header .inbox-state {
         width: 50vw;
         padding: 8px;
+    }
+
+    .img-container{
+        display: flex!important; 
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+    }
+    .home-img img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .home-img{
+        width: 150px;
+        height: 150px;
     }
     .preview-header-container header input {
         width: 310px;

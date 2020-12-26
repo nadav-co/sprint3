@@ -1,3 +1,6 @@
+const { Link } = ReactRouterDOM;
+
+
 export class Home extends React.Component {
 
     state = {
@@ -10,11 +13,14 @@ export class Home extends React.Component {
 
     render() {
         return (
-            <section>
-                <div className="home-container">
-                    <div className="home-img mail roll-in-top" > <img src="../assets/img/home-mail.jpg" alt="" /></div>
-                    <div className="home-img keep roll-in-left"> <img src="../assets/img/home-keep2.png" alt="" /></div>
-                    <div className="home-img book roll-in-right"> <img src="../assets/img/home-book.jpg" alt="" /></div>
+            <section className="home-container">
+                <h1 className="home-page-headline">
+                    Welcome To AppSus
+                </h1>
+                <div className="img-container">
+                    <Link to="/mail/list">   <div className="home-img mail roll-in-top" > <img src="../assets/img/home-mail.jpg" alt="" /></div></Link>
+                    <Link to="/keep"> <div className="home-img keep roll-in-left"> <img src="../assets/img/home-keep2.png" alt="" /></div></Link>
+                    <Link to="/book"> <div className="home-img book roll-in-right"> <img src="../assets/img/home-book.jpg" alt="" /></div></Link>
                 </div>
             </section>
         )

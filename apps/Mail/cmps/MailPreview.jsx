@@ -1,16 +1,13 @@
 import { mailService } from "../services/mail-service.js";
 const { Link } = ReactRouterDOM;
-
 export class MailPreview extends React.Component {
-
     state = {
         currMail: {},
         hidden: false,
         letterCount: 40,
-        isOpen:true
+        isOpen: true,
     }
-
-    ComponentDidMount() {
+    componentDidMount() {
         this.loadMail()
     }
 
@@ -21,35 +18,30 @@ export class MailPreview extends React.Component {
         })
     }
     onFav = (id) => {
-        mailService.setFavs(id)
-        const copyMail = { ...this.state.currMail }
-        copyMail.isFav = !copyMail.isFav
+        this.props.render()
+        const currMail = mailService.setFavs(id)
         this.setState({
-            currMail: copyMail
+            currMail: currMail
         })
     }
-
-
     toggleTxt = () => {
         var count = (this.state.isOpen) ? 150 : 40
         this.setState({
-            letterCount:count,
-            isOpen:!this.state.isOpen
+            letterCount: count,
+            isOpen: !this.state.isOpen
         })
-        
     }
-
     render() {
         const close = '📕'
         const open = '📖'
         const notFav = '☆'
         const fav = '⭐'
         const { mail } = this.props
+        const { currMail } = this.state
         const cls = (mail.isRead) ? 'read' : 'unread'
         const readEmoji = (mail.isRead) ? open : close
-        const starEmoji = (mail.isFav) ? fav : notFav
+        const starEmoji = (currMail.isFav) ? fav : notFav
         const date = mail.sentAt
-        console.log(date);
         const { letterCount } = this.state
         return (
             <section>
@@ -63,8 +55,6 @@ export class MailPreview extends React.Component {
                     <div className="date" > <Link onClick={() => this.props.changeState(mail.id)} to={`/mail/${mail.id}`}> <img className="full-size-icon" src="../../assets/img/full-size.jpg" alt="" /> </Link>{date.toDateString()}</div>
                 </div>
             </section>
-
         )
     }
-
 }

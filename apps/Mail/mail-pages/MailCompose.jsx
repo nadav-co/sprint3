@@ -2,11 +2,8 @@ import { mailService } from "../services/mail-service.js"
 import { keepService } from "../../Keep/services/keep-service.js"
 import { NotePreview } from "../../Keep/cmps/NotePreview.jsx";
 import { DynamicCmp } from "../../Keep/cmps/DynamicCmp.jsx";
-// import {NotePreview}
 const { Link } = ReactRouterDOM;
-
 export class MailCompose extends React.Component {
-
     state = {
         info: {
             title: '',
@@ -14,7 +11,7 @@ export class MailCompose extends React.Component {
             to: '',
             body: ''
         },
-        note:null
+        note: null
 
     }
 
@@ -50,29 +47,24 @@ export class MailCompose extends React.Component {
     }
 
     onSubmitCompose = (ev) => {
-        // if(note){
-        //     mailService.submitCompose(note)
-        // }
         const { info } = this.state
         mailService.submitCompose(info)
     }
 
     render() {
-        const {note} = this.state
+        const { note } = this.state
         return (
             <section>
                 {note && note.lines.map((line, idx) => <DynamicCmp colors={note.colors} id={note.id} key={line.id} idx={idx} line={line} />)}
-
                 {!note && <form className="mail-compose" action="">
-                    <header> New Mail</header>
+                    <header> New Mail  <Link to="/mail/list" > <img className=' send-btn cancel' src="./assets/img/cancel.jpg" alt="" />   </Link></header>
                     <input name="title" placeholder="title" type="text" onChange={this.handleChange} />
                     <input name="subject" placeholder="subject" type="text" onChange={this.handleChange} />
                     <input name="to" placeholder="to" type="text" onChange={this.handleChange} />
                     <textarea name="body" placeholder="write here" id="" cols="30" rows="10" onChange={this.handleChange}></textarea>
-                <Link to="/mail/list" > <button className='send-btn' type="button" onClick={this.onSubmitCompose}  >send</button> </Link>
-                </form> }
+                </form>}
+                <Link to="/mail/list" > <img className=' send-btn' src="./assets/img/send.jpg" alt="" onClick={this.onSubmitCompose} />   </Link>
             </section>
         )
-
     }
 }

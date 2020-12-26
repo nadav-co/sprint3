@@ -81,9 +81,12 @@ export class MailList extends React.Component {
                     <div className="inbox-state"  ><img src="assets/img/star2.jpg" alt="" /> <span className="inbox"> {this.state.favs}</span> </div>
                     <div className="inbox-state"  ><img src="assets/img/header-trash.jpg" alt="" /> <span className="inbox"> {this.state.trash}</span> </div>
                 </header>
+                <div className="mail-list-container">
+
                 {this.state.mails.map(mail => {
                     return <MailPreview render={this.loadMails} toggleState={this.toggleReadState} changeState={this.changeReadState} key={mail.body} mail={mail} />
                 })}
+                </div>
             </section>
         )
     }

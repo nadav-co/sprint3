@@ -73,8 +73,28 @@ button {
     cursor: pointer;
 }
 
+.mail-list-container{
+
+    height: 80vh;
+    overflow: overlay;
+
+}
+.mail-note{
+    height: 60vh;
+    overflow: overlay;
+    border: 1px solid black;
+    background-color: rgb(244, 246, 247);
+}
+
+.mail-note>*{
+    position: relative;
+    top: 70px;
+    left: 200px;
+    z-index: 3;
+}
 .mail-preview {
-    width: 75vw;
+    width: calc(100vw - 300px);
+  
     font-size: 1.1em;
     margin: 5px;
     padding: 10px;

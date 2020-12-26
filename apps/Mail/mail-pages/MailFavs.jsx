@@ -15,6 +15,5 @@ export function MailFavs() {
                 </div>
             )
         })
-
     )
 }

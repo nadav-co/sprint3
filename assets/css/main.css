@@ -14,3 +14,18 @@
 body {
     background-color: rgb(249 249 249 / 30%);
 }
+
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.center {
+    align-items: center;
+}

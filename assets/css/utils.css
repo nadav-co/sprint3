@@ -34,6 +34,11 @@ button:hover {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(130 130 130);
+}
+
 .debug {
     border: 2px solid green;
 }

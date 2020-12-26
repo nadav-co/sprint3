@@ -1,30 +1,26 @@
 
 import { mailService } from "../services/mail-service.js";
 const { Link } = ReactRouterDOM;
-
-
-export class MailTrash extends React.Component{
-
+export class MailTrash extends React.Component {
     state = {
-        trash:null
+        trash: null
     }
 
     componentDidMount() {
         const trash = mailService.getTrash()
-        this.setState({trash})
+        this.setState({ trash })
     }
 
-    
-    render(){
+    render() {
         return (
-            (this.state.trash&& this.state.trash.map(trs=>{
-               return <div key={trs.id} className={`mail-preview`} >
-                <div className="mail-subject">
-                    <span  >{trs.subject}</span>
+            (this.state.trash && this.state.trash.map(trs => {
+                return <div key={trs.id} className={`mail-preview`} >
+                    <div className="mail-subject">
+                        <span  >{trs.subject}</span>
+                    </div>
+                    <Link to={`/mail/${trs.id}`}> <p > {trs.body}</p > </Link>
                 </div>
-                <Link to={`/mail/${trs.id}`}> <p > {trs.body}</p > </Link>
-            </div>
-            })) 
+            }))
         )
     }
 

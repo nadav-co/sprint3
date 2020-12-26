@@ -1,4 +1,5 @@
 const { Link } = ReactRouterDOM;
+import homeMail from '../assets/img/home-mail.jpg'
 
 
 export class Home extends React.Component {
@@ -18,7 +19,7 @@ export class Home extends React.Component {
                     Welcome To AppSus
                 </h1>
                 <div className="img-container">
-                    <Link to="/mail/list">   <div className="home-img mail roll-in-top" > <img src="../assets/img/home-mail.jpg" alt="" /></div></Link>
+                    <Link to="/mail/list">   <div className="home-img mail roll-in-top" > <img src={homeMail} alt="" /></div></Link>
                     <Link to="/keep"> <div className="home-img keep roll-in-left"> <img src="../assets/img/home-keep2.png" alt="" /></div></Link>
                     <Link to="/book"> <div className="home-img book roll-in-right"> <img src="../assets/img/home-book.jpg" alt="" /></div></Link>
                 </div>

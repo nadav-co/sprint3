@@ -3,7 +3,7 @@ import { KeepApp } from "./apps/Keep/KeepApp.jsx";
 import { MailApp } from "./apps/Mail/mail-pages/MailApp.jsx";
 import { Header } from "./cmps/Header.jsx";
 import { Footer } from "./cmps/Footer.jsx";
-import { About } from "./pages/about.jsx";
+import { About } from "./pages/About.jsx";
 import { Home } from "./pages/home.jsx";
 
 const Router = ReactRouterDOM.HashRouter;

@@ -4,7 +4,7 @@ import { MailApp } from "./apps/Mail/mail-pages/MailApp.jsx";
 import { Header } from "./cmps/Header.jsx";
 import { Footer } from "./cmps/Footer.jsx";
 import { About } from "./pages/About.jsx";
-import { Home } from "./pages/home.jsx";
+import { Home } from "./pages/Home.jsx";
 
 const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;

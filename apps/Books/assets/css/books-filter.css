@@ -1,0 +1,16 @@
+.book-filter-container {
+    width: 400px;
+    flex-basis: 48%;
+    margin-left: 15px;
+}
+
+.book-filter button {
+    align-self: flex-start;
+    position: relative;
+    left: 170px;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 2em;
+    background-color: rgb(235, 235, 235);
+    color: rgb(80, 80, 80);
+}

@@ -1,0 +1,30 @@
+header.main-header {
+    display: flex;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e4dfdf;
+    justify-content: space-between;
+}
+
+.main-header .logo {
+    width: 65px;
+    height: 65px;
+}
+
+.main-header .navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.main-header .navbar li {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main-header a {
+    color: #818181;
+    text-decoration: none;
+}

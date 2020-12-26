@@ -64,7 +64,7 @@ export class NotePreview extends React.Component {
                     <li><input onChange={(event) => this.handleChange(note, event)} type="color" name="backgroundColor" id={`backgroundColor${note.id}`} value={this.state.backgroundColor} hidden/></li>
                 </ul>
 
-                {note.lines.map((line, idx) => <DynamicCmp colors={note.colors} id={note.id} key={line.id} idx={idx} line={line} />)}
+                {note.lines.map((line, idx) => <DynamicCmp colors={note.colors} id={note.id} key={line.id+`${Math.random()}`} idx={idx} line={line} />)}
                 <LineAdd id={note.id}/>
             </div>
         )

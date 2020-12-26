@@ -1,0 +1,38 @@
+@import './books-filter.css';
+@import './books-add.css';
+header.book-header {
+    position: relative;
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: 100%;
+    color: rgb(131, 131, 131);
+}
+
+header.book-header label {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+header.book-header h1 {
+    font-size: 1.4em;
+    margin: 10px 0 0 5px;
+    color: rgb(98, 98, 98);
+}
+
+header.book-header input {
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 2em;
+    border: 1px solid rgb(151, 151, 151);
+    margin-top: 10px;
+}
+
+header.book-header input[type="text"] {
+    width: 300px;
+}
+
+header.book-header input[type="number"] {
+    width: 100px;
+}

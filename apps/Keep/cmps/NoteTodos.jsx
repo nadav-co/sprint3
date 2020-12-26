@@ -30,7 +30,6 @@ export class NoteTodos extends React.Component{
     toggelDone = (idx) => {
         const {info} = {...this.state}
         info.todos[idx].isDone = !info.todos[idx].isDone
-        console.log(info.todos[idx]);
         this.setState({info})
         this.onSave()
     }

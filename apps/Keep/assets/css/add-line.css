@@ -1,0 +1,50 @@
+.add-line {
+    align-items: center;
+    margin-top: 1.4em;
+}
+
+.add-line input {
+    font-size: 0.8em;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 0.35em 0.7em;
+    border-radius: 2em;
+    width: 80%;
+}
+
+.add-line button {
+    font-size: 0.9em;
+    padding: 0.35em 0.7em;
+    margin-left: 10px;
+    border-radius: 2em;
+    border: 0;
+}
+
+.add-line ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0.7em;
+}
+
+.add-line li {
+    padding: 5px;
+}
+
+.add-line li img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0;
+}
+
+.add-line li:not(:first-child) {
+    margin-left: 15px;
+}
+
+.add-line li:hover {
+    cursor: pointer;
+}
+
+.add-line button {
+    background-color: rgb(211, 211, 211);
+    color: rgb(77, 77, 77);
+}

@@ -1,3 +1,4 @@
+import { BookApp } from "./apps/Books/BookApp.jsx";
 import { KeepApp } from "./apps/Keep/KeepApp.jsx";
 import { MailApp } from "./apps/Mail/mail-pages/MailApp.jsx";
 import { Header } from "./cmps/Header.jsx";
@@ -16,6 +17,7 @@ export function App() {
             <section className="app">
                 <Header />
                 <Switch>
+                    <Route path="/book" component={BookApp} />
                     <Route path="/keep" component={KeepApp} />
                     <Route path="/mail" component={MailApp} />
                     <Route path="/about" component={About} />

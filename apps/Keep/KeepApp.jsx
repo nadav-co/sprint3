@@ -51,11 +51,15 @@ export class KeepApp extends React.Component {
 
         return (
             <section>
-                <button className="start-demo" onClick={this.onToggleDemo}>Tutorial</button>
+                {!this.props.id && <button className="start-demo" onClick={this.onToggleDemo}>Tutorial</button>}
                 <hr/>
-                <KeepHeader />
+                <KeepHeader onToggleDemo={this.onToggleDemo} />
                 {!this.state.isDemo &&<NoteList onChangeFilter={this.onChangeFilter} pinned={pinned} unPinned={unPinned} />}
-                {this.state.isDemo && <NoteDemo toggleDemo={this.onToggleDemo}/>}
+                
+                    {this.state.isDemo && <NoteDemo toggleDemo={this.onToggleDemo}/>}
+                    {this.state.isDemo && <div className="demo-screen" onClick={ev => ev.stopPropagation()}></div>}
+                
+                
             </section>
         )
     }

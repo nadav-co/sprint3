@@ -15,7 +15,6 @@ export class MailList extends React.Component {
 
     componentDidMount() {
         this.loadMails()
-        console.log('im here');
     }
 
     loadMails = () => {
@@ -25,7 +24,6 @@ export class MailList extends React.Component {
         })
     }
     onFilterMails = (ev) => {
-        console.log(ev.target.value);
         const filterBySub = ev.target.value
         const mails = mailService.query(this.state.filterBySub)
 

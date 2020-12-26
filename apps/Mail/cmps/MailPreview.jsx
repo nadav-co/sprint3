@@ -49,7 +49,6 @@ export class MailPreview extends React.Component {
         const readEmoji = (mail.isRead) ? open : close
         const starEmoji = (mail.isFav) ? fav : notFav
         const date = mail.sentAt
-        console.log(date);
         const { letterCount } = this.state
         return (
             <section>

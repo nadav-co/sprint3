@@ -1,0 +1,27 @@
+.book-reviews button {
+    border-radius: 2em;
+    padding: 5px 10px;
+}
+
+.review-card {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 15px;
+}
+
+.review-card button {
+    position: relative;
+    top: -40px;
+    left: -45px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.add-book-review>* {
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.add-book-review select {
+    width: 50px;
+}

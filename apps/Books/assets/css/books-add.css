@@ -1,0 +1,18 @@
+.add-book {
+    width: 400px;
+}
+
+.add-book ul.google-list {
+    padding: 10px 0;
+    height: 170px;
+    overflow: overlay;
+    border-top: 1px solid rgb(155, 154, 154);
+}
+
+.add-book .google-list>li {
+    border-radius: 2em;
+    justify-content: space-between;
+    margin: 10px 30px 0 0;
+    border: 1px solid rgb(141, 141, 141);
+    padding: 10px;
+}

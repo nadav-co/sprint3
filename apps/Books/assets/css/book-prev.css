@@ -1,0 +1,32 @@
+.book-prev {
+    align-items: space-between;
+    width: 400px;
+    height: 530px;
+    margin: 15px;
+    padding: 30px 75px 30px 75px;
+    background-color: rgb(235, 235, 235);
+    color: rgb(114, 113, 113);
+    border-radius: 20px;
+    flex-grow: 1;
+    transition: 0.4s;
+}
+
+.book-prev img {
+    width: 250px;
+    height: 350px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.book-prev:hover {
+    cursor: pointer;
+    background-color: rgb(144, 144, 144);
+    color: rgb(236, 235, 235);
+    box-shadow: 0px 4px 6px 0px rgb(76 72 72 / 58%);
+}
+
+.book-prev h1 {
+    font-size: 1.7em;
+    margin: 0;
+    margin-top: 10px;
+}

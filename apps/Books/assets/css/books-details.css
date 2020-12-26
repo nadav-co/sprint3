@@ -1,0 +1,36 @@
+.book-details-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.book-details {
+    background-color: rgb(236, 235, 235);
+    border-radius: 20px;
+    padding: 30px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.book-details button {
+    border-radius: 2em;
+    padding: 5px 10px;
+}
+
+.book-details img {
+    border-radius: 20px;
+}
+
+.details-nav {
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.details-nav>* {
+    font-size: 1.3em;
+    font-weight: 700;
+}

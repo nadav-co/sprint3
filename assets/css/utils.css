@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.center {
+    align-items: center;
+}
+
+header a.active {
+    color: rgb(34, 31, 31);
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.debug {
+    border: 2px solid green;
+}

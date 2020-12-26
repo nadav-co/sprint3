@@ -4,7 +4,7 @@ export class KeepHeader extends React.Component {
     render() {
         return (
             <section>
-                <LineAdd />
+                <LineAdd/>
             </section>
         )
     }

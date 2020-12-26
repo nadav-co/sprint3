@@ -1,0 +1,64 @@
+@import './img-line.css';
+@import './text-line.css';
+@import './video-line.css';
+@import './todo-line.css';
+.note {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    padding: 15px;
+    border: 2px solid rgb(0, 153, 255);
+    background-color: rgb(246, 246, 246);
+    margin-top: 40px;
+    margin-left: 40px;
+    border-radius: 20px;
+}
+
+.note .actions {
+    align-items: flex-end;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+
+.note .actions img {
+    cursor: pointer;
+    height: 2em;
+    width: unset;
+}
+
+.note .actions input[type="color"] {
+    position: relative;
+    top: -200px;
+    left: -200px;
+}
+
+.note input {
+    background-color: rgb(246, 246, 246);
+    border: 0;
+    max-width: 350px;
+}
+
+button.delete {
+    padding-bottom: 4px;
+    align-self: self-start;
+    border: 1px solid rgb(54, 54, 54);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    position: relative;
+    line-height: 1em;
+}
+
+button.delete:focus {
+    outline: 0;
+    background-color: #f84436;
+    color: rgb(238, 238, 238) !important;
+}
+
+.note button.delete {
+    font-size: 1.1em;
+    top: -28px;
+    left: -41px;
+}

@@ -1,0 +1,22 @@
+.note-video video {
+    object-fit: contain;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.note-video iframe {
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+div.note-video button.delete {
+    color: #f84436;
+    border: 0;
+    position: relative;
+    top: 18px;
+    left: -3px;
+}

@@ -49,7 +49,7 @@
 
 .main-demo img.stage-0 {
     position: relative;
-    top: -950px;
+    top: -910px;
     left: -300px;
 }
 
@@ -60,7 +60,7 @@
 
 .main-demo img.stage-1 {
     position: relative;
-    top: -970px;
+    top: -980px;
     left: -70px;
     transform: rotate(125deg);
 }
@@ -86,7 +86,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -357px;
+    top: -365px;
     left: 45px;
     transform: rotate(125deg);
 }
@@ -100,7 +100,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -357px;
+    top: -365px;
     left: 100px;
     transform: rotate(125deg);
 }
@@ -114,7 +114,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -357px;
+    top: -365px;
     left: 156px;
     transform: rotate(125deg);
 }
@@ -128,7 +128,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -357px;
+    top: -365px;
     left: 213px;
     transform: rotate(125deg);
 }
@@ -142,7 +142,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -357px;
+    top: -365px;
     left: 271px;
     transform: rotate(125deg);
 }
@@ -156,7 +156,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -872px;
+    top: -882px;
     left: 37px;
     transform: rotate(125deg);
 }
@@ -170,7 +170,7 @@
     width: 70px;
     height: 70px;
     position: relative;
-    top: -871px;
+    top: -881px;
     left: 212px;
     transform: rotate(125deg);
 }
@@ -184,7 +184,7 @@
     width: 120px;
     height: 90px;
     position: relative;
-    top: -880px;
+    top: -890px;
     left: 253px;
     transform: rotate(125deg);
 }
@@ -198,7 +198,7 @@
     width: 50px;
     height: 50px;
     position: relative;
-    top: -833px;
+    top: -843px;
     left: 39px;
     transform: rotate(125deg);
 }
@@ -212,7 +212,7 @@
     width: 50px;
     height: 50px;
     position: relative;
-    top: -531px;
+    top: -541px;
     left: 84px;
     transform: rotate(125deg);
 }

@@ -1,16 +1,18 @@
-
-@font-face{
+@font-face {
     font-family: lobster;
     src: url(/assets/fonts/Lobster-Regular.ttf);
 }
-@font-face{
+
+@font-face {
     font-family: viaoda;
     src: url(/assets/fonts/ViaodaLibre-Regular.ttf);
 }
+
 @font-face {
     font-family: facebook;
     src: url(../fonts/fa/fa-brands-400.ttf);
 }
+
 
 /* FA*/
 
@@ -58,50 +60,49 @@
     content: "\f17d";
 }
 
-
-
-.home-img img:hover{
-background-color: rgb(141, 138, 138);
-/* border-radius: 10px; */
-box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
+.home-img img:hover {
+    background-color: rgb(141, 138, 138);
+    /* border-radius: 10px; */
+    box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
 }
+
 .home-img img {
     cursor: pointer;
     transition: all 0.4s;
     width: 300px;
     height: 300px;
-    border:1px solid grey;
+    border: 1px solid grey;
     padding: 40px;
     border-radius: 20px;
     background-color: #dddbdb;
 }
-.home-container{
+
+.home-container {
     background-color: #eaeaea;
     height: 100vh;
 }
 
-.img-container{
+.img-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows:  200px 200px  ;
-    grid-template-areas:
-    "keep mail book"
-    "keep mail book"
-    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "keep mail book" "keep mail book";
 }
 
-.home-img.mail{
-        grid-area: mail;
+.home-img.mail {
+    grid-area: mail;
 }
-.home-img.keep{
+
+.home-img.keep {
     grid-area: keep;
 }
-.home-img.book{
+
+.home-img.book {
     grid-area: book;
 }
 
-.home-page-headline{
+.home-page-headline {
     text-align: center;
     font-family: viaoda;
     /* font-family: lobster; */
@@ -113,9 +114,7 @@ box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
     margin: 0;
     padding: 20px;
     margin-bottom: 60px;
-    
 }
-
 
 .social-container {
     padding: 0;
@@ -123,6 +122,7 @@ box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
     display: flex;
     justify-content: space-evenly;
 }
+
 .social-container li {
     display: flex;
     list-style: none;
@@ -140,10 +140,9 @@ box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
     transition: all 0.35s;
     cursor: pointer;
 }
+
 .main-footer {
-    /* margin-top: 30px; */
     flex-direction: column;
-    /* background-color: #dd4f43; */
     background-color: #fff;
     justify-content: center;
     align-items: center;
@@ -161,4 +160,3 @@ box-shadow: -2px 5px 6px 0px rgb(56 52 52 / 82%);
     padding-bottom: 1rem;
     text-align: center;
 }
-

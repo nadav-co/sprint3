@@ -12,6 +12,7 @@ export class KeepApp extends React.Component {
         isDemo: false
     }
 
+
     componentDidMount() {
         this.reloadNotes()
         this.unsubscribe = bus.on('reloadNotes', this.reloadNotes)
@@ -26,8 +27,6 @@ export class KeepApp extends React.Component {
             .then(notes => {
                 this.setState({ notes })
         })
-        // .then(this.setPinnedNotes)
-        // .then(this.setUnpinnedNotes)
     }
     onToggleDemo = () => this.setState({isDemo: !this.state.isDemo})
 
@@ -56,8 +55,9 @@ export class KeepApp extends React.Component {
                 <KeepHeader onToggleDemo={this.onToggleDemo} />
                 {!this.state.isDemo &&<NoteList onChangeFilter={this.onChangeFilter} pinned={pinned} unPinned={unPinned} />}
                 
-                    {this.state.isDemo && <NoteDemo toggleDemo={this.onToggleDemo}/>}
-                    {this.state.isDemo && <div className="demo-screen" onClick={ev => ev.stopPropagation()}></div>}
+                {this.state.isDemo && <NoteDemo toggleDemo={this.onToggleDemo}/>}
+                {this.state.isDemo && <div className="demo-screen" onClick={ev => ev.stopPropagation()}></div>}
+                {this.state.isDemo && <div className="footer-pusher"></div>}
                 
                 
             </section>

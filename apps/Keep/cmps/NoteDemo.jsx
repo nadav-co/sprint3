@@ -28,16 +28,17 @@ export class NoteDemo extends React.Component {
         ]}
     }
 
+    refH1 = React.createRef()
     componentDidMount() {
-
+        this.refH1.current.scrollIntoView(false)
     }
 
     render() {
         const {stage} = this.state
         return (
-            <section className="main-demo" >
-                <NotePreview note={this.state.note}/>
-                {stage < 12 && <button className="next" onClick={()=>this.setState({stage:stage+1})}>Next</button>}
+            <section ref={this.refH1} className="main-demo" >
+                <NotePreview  note={this.state.note}/>
+                {stage < 12 && <button className="next"  onClick={()=>this.setState({stage:stage+1})}>Next</button>}
                 {stage >= 12&& <button className="next" onClick={this.props.toggleDemo}>Lets Start</button>}
                 {stage === 0 && <h1 className="stage-0 slide-in-bottom">This is where you create a new note</h1>}
                 {stage === 0 && <img className="stage-0 bounce" src="../assets/img/arrow-up.png"></img>}

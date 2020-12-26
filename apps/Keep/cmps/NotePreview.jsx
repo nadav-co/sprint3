@@ -57,10 +57,10 @@ export class NotePreview extends React.Component {
                 
                 <ul className="actions flex">
                     <li className="pin" onClick={()=>this.onTogglePin(note)}>&#128204;</li>
-                    <li><Link to={`/mail/compose/${note.id}`}><img src="../assets/img/send.png" alt=""/></Link></li>
-                    <li><label htmlFor={`borderColor${note.id}`}><img src="../assets/img/border.png" alt="fuckkkkk"/></label></li>
+                    <li><Link to={`/mail/compose/${note.id}`}><img src="assets/img/send.png" alt=""/></Link></li>
+                    <li><label htmlFor={`borderColor${note.id}`}><img src="assets/img/border.png" alt="fuckkkkk"/></label></li>
                     <li><input onChange={(event) => this.handleChange(note, event)} type="color" name="borderColor" value={this.state.borderColor} id={`borderColor${note.id}`} hidden/></li>
-                    <li><label htmlFor={`backgroundColor${note.id}`}><img src="../assets/img/fill.png" alt="fuckkkk2" alt="fuckkkkk"/></label></li>
+                    <li><label htmlFor={`backgroundColor${note.id}`}><img src="assets/img/fill.png" alt="fuckkkk2" alt="fuckkkkk"/></label></li>
                     <li><input onChange={(event) => this.handleChange(note, event)} type="color" name="backgroundColor" id={`backgroundColor${note.id}`} value={this.state.backgroundColor} hidden/></li>
                 </ul>
 

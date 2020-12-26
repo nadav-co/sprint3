@@ -52,7 +52,7 @@ export class MailPreview extends React.Component {
                         <span  >{mail.subject}</span>
                     </div>
                     <div className="mail-body"> <p onClick={this.toggleTxt}> {mail.body.substring(0, letterCount)}</p >...   </div>
-                    <div className="date" > <Link onClick={() => this.props.changeState(mail.id)} to={`/mail/${mail.id}`}> <img className="full-size-icon" src="../../assets/img/full-size.jpg" alt="" /> </Link>{date.toDateString()}</div>
+                    <div className="date" > <Link onClick={() => this.props.changeState(mail.id)} to={`/mail/${mail.id}`}> <img className="full-size-icon" src="assets/img/full-size.jpg" alt="" /> </Link>{date.toDateString()}</div>
                 </div>
             </section>
         )

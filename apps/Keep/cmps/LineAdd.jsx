@@ -64,11 +64,11 @@ export class LineAdd extends React.Component {
                 <input onKeyUp={this.onSave} onChange={this.handleChange} ref={this.refInput}  placeholder={this.state.txt} type="text"/>
                 <button onClick={this.onSave}>Save</button>
                 <ul className="add-options flex">
-                    <li onClick={() => this.changeType('text')}><img src="../assets/img/txt.png" alt=""/></li>
-                    <li onClick={() => this.changeType('img')}><img src="../assets/img/img.png" alt=""/></li>
-                    <li onClick={() => this.changeType('video')}><img src="../assets/img/video.png" alt=""/></li>
-                    <li onClick={() => this.changeType('gif')}><img src="../assets/img/gif.png" alt=""/></li>
-                    <li onClick={() => this.changeType('todos')}><img src="../assets/img/todos.png" alt=""/></li>
+                    <li onClick={() => this.changeType('text')}><img src="assets/img/txt.png" alt=""/></li>
+                    <li onClick={() => this.changeType('img')}><img src="assets/img/img.png" alt=""/></li>
+                    <li onClick={() => this.changeType('video')}><img src="assets/img/video.png" alt=""/></li>
+                    <li onClick={() => this.changeType('gif')}><img src="assets/img/gif.png" alt=""/></li>
+                    <li onClick={() => this.changeType('todos')}><img src="assets/img/todos.png" alt=""/></li>
                 </ul>
                 {!this.props.id && <hr/>}
             </section>

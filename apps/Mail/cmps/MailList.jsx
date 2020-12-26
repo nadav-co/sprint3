@@ -77,9 +77,9 @@ export class MailList extends React.Component {
                     <input name="search-bar" onChange={this.onFilterMails} type="text" placeholder="search" />
                 </header>
                 <header className="flex" >
-                    <div className="inbox-state"  ><img src="../assets/img/drawer.jpg" alt="" /> <span className="inbox"> {this.state.inbox}</span> </div>
-                    <div className="inbox-state"  ><img src="../assets/img/star2.jpg" alt="" /> <span className="inbox"> {this.state.favs}</span> </div>
-                    <div className="inbox-state"  ><img src="../assets/img/header-trash.jpg" alt="" /> <span className="inbox"> {this.state.trash}</span> </div>
+                    <div className="inbox-state"  ><img src="assets/img/drawer.jpg" alt="" /> <span className="inbox"> {this.state.inbox}</span> </div>
+                    <div className="inbox-state"  ><img src="assets/img/star2.jpg" alt="" /> <span className="inbox"> {this.state.favs}</span> </div>
+                    <div className="inbox-state"  ><img src="assets/img/header-trash.jpg" alt="" /> <span className="inbox"> {this.state.trash}</span> </div>
                 </header>
                 {this.state.mails.map(mail => {
                     return <MailPreview render={this.loadMails} toggleState={this.toggleReadState} changeState={this.changeReadState} key={mail.body} mail={mail} />

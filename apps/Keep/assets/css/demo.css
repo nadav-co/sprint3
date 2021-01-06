@@ -36,183 +36,96 @@
 
 .main-demo>img {
     height: 100px;
+    position: relative;
 }
 
 .main-demo>h1 {
     font-size: 2em;
-}
-
-.main-demo h1.stage-0 {
     position: relative;
     top: -900px;
 }
 
 .main-demo img.stage-0 {
-    position: relative;
     top: -910px;
     left: -300px;
 }
 
-.main-demo h1.stage-1 {
-    position: relative;
-    top: -900px;
-}
-
 .main-demo img.stage-1 {
-    position: relative;
     top: -980px;
     left: -70px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-2 {
-    position: relative;
-    top: -890px;
 }
 
 .main-demo img.stage-2 {
-    position: relative;
     top: -400px;
     left: -100px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-3 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-3 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -365px;
     left: 45px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-4 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-4 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -365px;
     left: 100px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-5 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-5 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -365px;
     left: 156px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-6 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-6 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -365px;
     left: 213px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-7 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-7 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -365px;
     left: 271px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-8 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-8 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -882px;
     left: 37px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-9 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-9 {
     width: 70px;
     height: 70px;
-    position: relative;
     top: -881px;
     left: 220px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-10 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-10 {
     width: 120px;
     height: 90px;
-    position: relative;
     top: -890px;
     left: 253px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-11 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-11 {
     width: 50px;
     height: 50px;
-    position: relative;
     top: -843px;
     left: 39px;
-    transform: rotate(125deg);
-}
-
-.main-demo h1.stage-12 {
-    position: relative;
-    top: -900px;
 }
 
 .main-demo img.stage-12 {
     width: 50px;
     height: 50px;
-    position: relative;
     top: -541px;
     left: 84px;
-    transform: rotate(125deg);
 }
